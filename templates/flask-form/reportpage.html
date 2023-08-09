@@ -1,0 +1,23 @@
+{%extends 'flask-form/base.html' %}
+
+{% block content %}
+        <h2>Let's how you perform!</h2>
+
+        {% if allTrue %}
+        <h3>Your username pass the 3 requirements!</h3>
+        {% endif %}
+        <ul>
+             {% if not upper_letter %}
+            <li>Sorry, you have not passed UPPER case!</li>
+            {% endif  %}
+
+             {% if not lower_latter %}
+            <li>Sorry, you have not passed LOWER case!</li>
+            {% endif  %}
+
+             {% if not num_end %}
+            <li>Sorry, you have not passed last character should be number case!</li>
+            {% endif  %}
+        </ul>
+
+{% endblock %}

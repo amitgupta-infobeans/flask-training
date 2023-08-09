@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Example of Template Control Flow
+        </title>
+    </head>
+    <body>
+        <h1>Control Flow Example </h1>
+            <ul>
+                {% for dictItm in mydict %}
+                    <li>Name: {{ dictItm['name'] }}</li>
+                    <li>Email: {{ dictItm['email'] }}</li>
+                {% endfor %}
+            </ul>
+
+            <p>
+                {% if isLogged %}
+                    <h2>You are Logged in</h2>
+                {% else %}
+                    <h2>You have to logged in first</h2>
+                {% endif %}
+            </p>
+    </body>
+</html>

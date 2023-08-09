@@ -1,0 +1,29 @@
+{% extends 'flask-form/base.html' %}
+
+
+{% block content %}
+    
+
+    <div class="jumbotron">
+        
+    <h1>Welcome to Home Page...</h1>
+    <h3>Read the instaruction to type the Username:</h3>
+
+    <ul>
+        <li>Must have an upper case letter somewhere</li>
+        <li>Must have lower case letter somewhere</li>
+        <li>Must have a number at the end</li>
+    </ul>
+
+    <div class="dataform">
+        
+        <span>Username: </span>
+        <form action="{{ url_for('reportpage')}}" >
+            <input type="text"  name="username" autocomplete="off">
+            <input type="submit" value="Submit">
+        </form>
+
+    </div>
+</div>
+
+{% endblock %}

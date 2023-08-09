@@ -1,0 +1,11 @@
+{% extends 'base-inheritance.html' %}
+
+
+{% block content %}
+
+    <h2>This is Example of Template of Inheritance..</h2>
+
+    <h2>This is Example of URL Redirect... <a href="{{ url_for('aboutus') }}">Click</a> to go to About Us Page</h2>
+    <h2>Go to Laptop Image  <a href="{{ url_for('static', filename='laptop.jpg') }}">Click</a> </h2>
+
+{% endblock %}
