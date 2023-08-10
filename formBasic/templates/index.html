@@ -1,0 +1,21 @@
+<p>
+
+    {% if breed %}
+        The breed you entered is: {{breed}}
+        <br>
+        Update it is in the form below:
+    {%else %}
+        Enter your breed:
+    {%endif%}
+</p>
+
+<form method="POST" >
+    <!-- for csrf token -->
+    {{ form.hidden_tag() }}
+
+    {{ form.breed.label }}{{ form.breed(class='css-some-class') }}
+    {{ form.submit()  }}
+
+
+</form>
+

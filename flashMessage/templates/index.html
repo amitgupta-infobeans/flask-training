@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Flash Message Example
+        </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    </head>
+    <body>
+        {% for mes in get_flashed_messages() %}
+        
+        <div class="alert alert-success alert-dismissible">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>Success!</strong> {{ mes }}
+          </div>
+
+        {%endfor %}
+
+        <form method="POST" >
+                {{ form.hidden_tag() }}
+                {{ form.breed.label }} {{ form.breed() }}
+                {{ form.submit() }}
+        </form>
+       
+    </body>
+</html>
